@@ -1,0 +1,25 @@
+<h1>编辑评论</h1>
+
+<%= form_tag review_path(@review), :method => :put  do -%>
+
+ <tr><%= label :review, :username, '用户名称:'%>
+     <%= text_field(:review, :username) %><br /><br /></tr>   
+     
+ <tr><%= label :review, :coursename, '课程名称:'%>
+     <%= text_field(:review, :coursename) %><br /><br /></tr>    
+      
+ <tr><%= label :review, :ratingone, '讲课内容(1~5分):'%>
+     <%= select :review, :ratingone, ['1','2','3','4','5']%><br /><br /></tr>
+ 
+ <tr><%= label :review, :ratingtwo, '授课方式(1~5分):'%>
+     <%= select :review, :ratingtwo, ['1','2','3','4','5']%> <br  /><br /></tr>
+ 
+ <tr><%= label :review, :ratingthree, '考试难易(1~5分):'%>
+     <%= select :review, :ratingthree, ['1','2','3','4','5']%> <br /><br /></tr>
+ 
+ <tr><%= label :review, :description, '课程优缺点'%>
+     <%= text_field :review, 'description'%><br /><br /></tr>
+   
+   <%= submit_tag '更新评论' %>
+<% end -%> 
+ <tr><%= link_to 'Back', reviews_path %></tr>
