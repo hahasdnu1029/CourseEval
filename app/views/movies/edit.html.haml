@@ -1,0 +1,19 @@
+-# edit.html.haml using partial
+
+%h1 编辑当前课程
+
+= form_tag movie_path(@movie), :method => :put do
+
+  = label :movie, :title, '课程名称'
+  = text_field :movie, 'title'
+  
+  = label :movie, :credit, '课程学分'
+  = text_field :movie, 'credit'
+  
+  = label :movie, :classhour, '课程学时'
+  = text_field :movie, 'classhour'
+
+  = label :movie, :description, '描述'
+  = text_field :movie, 'description'
+
+  = submit_tag '更新课程信息'
